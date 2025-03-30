@@ -1,0 +1,28 @@
+[package]
+name = "innards"
+version = "0.1.0"
+edition = "2021"
+description = "Interactive phased linear array simulation"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+console_error_panic_hook = "0.1.7"
+wasm-bindgen = "0.2.87"
+js-sys = "0.3.64"
+
+[dependencies.web-sys]
+version = "0.3.60"
+features = [
+  'WebGlBuffer',
+  'WebGlVertexArrayObject',
+  'WebGl2RenderingContext',
+  'WebGlProgram',
+  'WebGlShader',
+  'WebGlUniformLocation',
+]
+
+
+[lib]
+crate-type = ["cdylib"]

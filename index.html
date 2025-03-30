@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Phased Array Simulations</title>
+        <style></style>
+    </head>
+    <body>
+        <canvas></canvas>
+        <div class="inputs">
+            <form>
+                Frequency(GHz):
+                <input type="number" name="frequency" id="frequency" value="3" />
+                <hr />
+                Antenna spacing (in terms of λ):
+                <input type="number" name="antennaspacing" id="antennaspacing" value="0.25" />
+                <hr />
+                Number of antenna elements:
+                <input type="number" name="antennacount" id="antennacount" min="2" max="200" value="25" />
+                <hr />
+                Zoom:
+                <input type="range" name="zoom" id="zoom" min="0.01" max="1" value="0.5" step="0.01" />
+            </form>
+        </div>
+        <script type="module" src="/src/main.ts" defer></script>
+    </body>
+</html>
